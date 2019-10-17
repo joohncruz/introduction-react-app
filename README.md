@@ -11,3 +11,8 @@ Devemos iniciar o projeto utilizando a lib create-react-app, com ela nao precisa
 ``cd my-app``
 
 ``npm start``
+
+### Etapa 1: Estrutura de pastas
+
+``git checkout etapa/1``
+
