@@ -14,7 +14,6 @@ function Column({ id, name, items, onChange }) {
 
   const alterActiveItem = (key) => {
     const alteredItems = items.map(item => item.key === key ? { ...item, state: !item.state } : { ...item })
-    console.log('TRACE alterActiveItem', alteredItems);
     onChange(id, { items: alteredItems });
   }
 

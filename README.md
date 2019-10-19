@@ -31,3 +31,10 @@ Devemos iniciar o projeto utilizando a lib create-react-app, com ela nao precisa
 - Estilo
 
 ``git checkout etapa/3``
+
+### Etapa 4
+
+- Context
+- Loading
+
+``git checkout etapa/4``
