@@ -15,9 +15,9 @@ class Board extends Component {
           id: 1,
           name: 'Lazer',
           items: [
-            { key: 11, value: 'Masterchef no YouTube', state: 0 },
-            { key: 22, value: 'Jogar no celular', state: 0 },
-            { key: 33, value: 'Leitura', state: 0 },
+            { key: 11, value: 'Masterchef no YouTube Masterchef', state: false },
+            { key: 22, value: 'Jogar no celular', state: true },
+            { key: 33, value: 'Leitura', state: true },
           ],
         }
       ]
@@ -43,16 +43,20 @@ class Board extends Component {
 
     return (
       <div className="board">
-        <InputEdit value={name} onChange={this.alterBoardName} />
-        {columns.map(column => (
-          <Column
-            key={column.id}
-            id={column.id}
-            name={column.name}
-            items={column.items}
-            onChange={this.alterColumn}
-          />
-        ))}
+        <div className="board__title">
+          <InputEdit value={name} onChange={this.alterBoardName} />
+        </div>
+        <div className="board__content">
+          {columns.map(column => (
+            <Column
+              key={column.id}
+              id={column.id}
+              name={column.name}
+              items={column.items}
+              onChange={this.alterColumn}
+            />
+          ))}
+        </div>
       </div>
     )
   }

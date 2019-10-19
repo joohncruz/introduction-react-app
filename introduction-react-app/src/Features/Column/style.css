@@ -1,5 +1,12 @@
 .column {
-    background-color: coral;
+    background-color: #3e3990;
     color: whitesmoke;
     font-weight: bold;
+    border-radius: 10px;
+    padding: 16px;
+    width: 300px;
+}
+
+.column__title {
+    padding: 8px;
 }

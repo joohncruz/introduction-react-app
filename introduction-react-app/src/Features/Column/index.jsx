@@ -9,17 +9,27 @@ import './style.css';
 function Column({ id, name, items, onChange }) {
 
   const alterName = (text) => {
-    onChange(id, {name: text, items});
+    onChange(id, { name: text, items });
+  }
+
+  const alterActiveItem = (key) => {
+    const alteredItems = items.map(item => item.key === key ? { ...item, state: !item.state } : { ...item })
+    console.log('TRACE alterActiveItem', alteredItems);
+    onChange(id, { items: alteredItems });
   }
 
   return (
     <div className="column">
-      <InputEdit value={name} onChange={alterName}></InputEdit>
+      <div className="column__title">
+        <InputEdit value={name} onChange={alterName}></InputEdit>
+      </div>
       {items.map(item => (
         <Item
           key={item.key}
+          id={item.key}
           value={item.value}
           state={item.state}
+          onChange={alterActiveItem}
         />
       ))}
     </div>

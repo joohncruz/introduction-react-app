@@ -15,6 +15,7 @@ function InputEdit({ value, onChange }) {
     <div className="input-edit" onDoubleClick={() => setEdit(!isEditable)}>
       {isEditable ?
         <input
+          className="input-edit__input"
           autoFocus
           value={value}
           onChange={(event) => onChange(event.target.value)}

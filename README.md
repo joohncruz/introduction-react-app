@@ -25,3 +25,9 @@ Devemos iniciar o projeto utilizando a lib create-react-app, com ela nao precisa
 - Props
 
 ``git checkout etapa/2``
+
+### Etapa 3 
+
+- Estilo
+
+``git checkout etapa/3``

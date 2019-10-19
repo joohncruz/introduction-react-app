@@ -1,3 +1,13 @@
 .input-edit {
-    
+    cursor: pointer;
+}
+
+.input-edit__input {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    border: none;
+    border-radius: 0.4rem;
+    height: 2em;
 }
