@@ -12,7 +12,16 @@ Devemos iniciar o projeto utilizando a lib create-react-app, com ela nao precisa
 
 ``npm start``
 
-### Etapa 1: Estrutura de pastas
+### Etapa 1
+
+- Estrutura de pastas
+- Tipos de Componentes
 
 ``git checkout etapa/1``
 
+### Etapa 2
+
+- State
+- Props
+
+``git checkout etapa/2``

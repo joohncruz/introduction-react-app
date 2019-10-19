@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Column from '../Column';
+import InputEdit from '../../Components/InputEdit';
 
 import './style.css';
 
@@ -11,7 +12,7 @@ class Board extends Component {
       name: 'ToDos',
       columns: [
         {
-          key: 1,
+          id: 1,
           name: 'Lazer',
           items: [
             { key: 11, value: 'Masterchef no YouTube', state: 0 },
@@ -23,17 +24,33 @@ class Board extends Component {
     };
   }
 
+  alterBoardName = (text) => {
+    this.setState({ name: text });
+  }
+
+  alterColumn = (id, newColumn) => {
+    const { columns } = this.state;
+
+    const alteredColums = columns.map(column =>
+      column.id === id ? { ...column, ...newColumn } : { ...column }
+    )
+
+    this.setState({ columns: alteredColums });
+  }
+
   render() {
     const { columns, name } = this.state;
 
     return (
       <div className="board">
-        <h1>{name}</h1>
+        <InputEdit value={name} onChange={this.alterBoardName} />
         {columns.map(column => (
           <Column
-            key={column.key}
+            key={column.id}
+            id={column.id}
             name={column.name}
             items={column.items}
+            onChange={this.alterColumn}
           />
         ))}
       </div>
